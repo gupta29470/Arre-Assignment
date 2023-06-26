@@ -12,19 +12,22 @@ class ActionWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(
-          title,
-          style: TextThemeHelper.aquaTint_14_400,
-        ),
-        const Icon(
-          Icons.arrow_forward_ios,
-          size: 10,
-          color: AppColorsHelper.aquaTint,
-        ),
-      ],
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 18),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            title,
+            style: TextThemeHelper.aquaTint_14_400,
+          ),
+          const Icon(
+            Icons.arrow_forward_ios,
+            size: 10,
+            color: AppColorsHelper.aquaTint,
+          ),
+        ],
+      ),
     );
   }
 }

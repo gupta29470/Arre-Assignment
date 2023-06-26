@@ -13,16 +13,18 @@ class EditMyLanguagesWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 16,
-        vertical: 12,
+      padding: const EdgeInsets.fromLTRB(
+        29,
+        15,
+        29,
+        23,
       ),
       decoration: DecorationHelper.editLanguagesBottomSheetDecor,
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
           Padding(
-            padding: const EdgeInsets.only(bottom: 24),
+            padding: const EdgeInsets.only(bottom: 20),
             child: SizedBox(
               height: 9,
               width: 30,
@@ -32,21 +34,21 @@ class EditMyLanguagesWidget extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(bottom: 16),
+            padding: const EdgeInsets.only(bottom: 10),
             child: Text(
               "Edit My Languages",
               style: TextThemeHelper.aquaTint_20_700,
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(bottom: 24),
+            padding: const EdgeInsets.only(bottom: 30),
             child: Text(
               "Select the languages VoicePods to be in",
               style: TextThemeHelper.dimGrey_14_400,
             ),
           ),
           const Padding(
-            padding: EdgeInsets.only(bottom: 32),
+            padding: EdgeInsets.only(bottom: 36),
             child: LanguagesListWidget(),
           ),
           Padding(

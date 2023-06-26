@@ -22,6 +22,9 @@ class HighlightActionWidget extends StatelessWidget {
       onTap: onTap,
       child: Container(
         padding: const EdgeInsets.all(12),
+        margin: const EdgeInsets.only(
+          bottom: 16,
+        ),
         decoration: DecorationHelper.highlightActionDecor,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

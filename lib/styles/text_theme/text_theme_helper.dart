@@ -18,9 +18,10 @@ class TextThemeHelper {
     color: AppColorsHelper.synergy,
   );
 
-  static TextStyle synergy_14_400 = aquaTint_14_400.copyWith(
+  static TextStyle synergy_14_400_underlined = aquaTint_14_400.copyWith(
     fontWeight: FontWeight.w400,
     color: AppColorsHelper.synergy,
+    decoration: TextDecoration.underline,
   );
 
   static TextStyle aquaTint_20_700 = aquaTint_14_400.copyWith(

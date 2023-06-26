@@ -12,8 +12,8 @@ class LanguagesListWidget extends ConsumerWidget {
     List<String> selectedLanguages = ref.watch(selectedLanguagesProvider);
 
     return Wrap(
-      spacing: 16,
-      runSpacing: 24,
+      spacing: 20,
+      runSpacing: 30,
       children: List.generate(
         LanguageConstants.languagesList.length,
         (index) {
