@@ -18,9 +18,9 @@ class AccountSettingsScreen extends StatelessWidget {
           Container(
             padding: const EdgeInsets.fromLTRB(
               16,
-              96,
+              48,
               16,
-              24,
+              22,
             ),
             margin: const EdgeInsets.all(0),
             color: AppColorsHelper.freinachtBlack,
@@ -44,7 +44,7 @@ class AccountSettingsScreen extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 4,
+            height: 1,
             width: double.infinity,
             child: DecoratedBox(
               decoration: DecorationHelper.appBarDividerDecor,
@@ -54,57 +54,42 @@ class AccountSettingsScreen extends StatelessWidget {
             child: Container(
               color: AppColorsHelper.coarseWool,
               padding: const EdgeInsets.fromLTRB(
-                16,
-                12,
-                16,
+                20,
+                9,
+                20,
                 16,
               ),
               child: Column(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(
-                      bottom: 16,
-                    ),
-                    child: HighlightActionWidget(
-                      image: Images.shieldAlert,
-                      title: "Community",
-                      onTap: () {},
-                    ),
+                  HighlightActionWidget(
+                    image: Images.shieldAlert,
+                    title: "Community",
+                    onTap: () {},
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                      bottom: 16,
-                    ),
-                    child: HighlightActionWidget(
-                      image: Images.help,
-                      title: "Help Centre",
-                      onTap: () {},
-                    ),
+                  HighlightActionWidget(
+                    image: Images.help,
+                    title: "Help Centre",
+                    onTap: () {},
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                      bottom: 16,
-                    ),
-                    child: HighlightActionWidget(
-                      image: Images.editLang,
-                      title: "Edit My Languages",
-                      onTap: () {
-                        showModalBottomSheet(
-                          context: context,
-                          backgroundColor: Colors.transparent,
-                          builder: (_) {
-                            return const EditMyLanguagesWidget();
-                          },
-                        );
-                      },
-                    ),
+                  HighlightActionWidget(
+                    image: Images.editLang,
+                    title: "Edit My Languages",
+                    onTap: () {
+                      showModalBottomSheet(
+                        context: context,
+                        backgroundColor: Colors.transparent,
+                        builder: (_) {
+                          return const EditMyLanguagesWidget();
+                        },
+                      );
+                    },
                   ),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(
                       8,
+                      15,
                       8,
-                      8,
-                      8,
+                      18,
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -144,29 +129,17 @@ class AccountSettingsScreen extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Padding(
-                          padding: EdgeInsets.only(bottom: 24),
-                          child: ActionWidget(
-                            title: "Terms of Service",
-                          ),
+                        ActionWidget(
+                          title: "Terms of Service",
                         ),
-                        Padding(
-                          padding: EdgeInsets.only(bottom: 24),
-                          child: ActionWidget(
-                            title: "Privacy Policies",
-                          ),
+                        ActionWidget(
+                          title: "Privacy Policies",
                         ),
-                        Padding(
-                          padding: EdgeInsets.only(bottom: 24),
-                          child: ActionWidget(
-                            title: "Temporarily Deactivate My Account",
-                          ),
+                        ActionWidget(
+                          title: "Temporarily Deactivate My Account",
                         ),
-                        Padding(
-                          padding: EdgeInsets.only(bottom: 24),
-                          child: ActionWidget(
-                            title: "Permanently Delete My Account",
-                          ),
+                        ActionWidget(
+                          title: "Permanently Delete My Account",
                         ),
                       ],
                     ),
@@ -236,7 +209,7 @@ class AccountSettingsScreen extends StatelessWidget {
                         padding: const EdgeInsets.only(bottom: 8),
                         child: Text(
                           "Version 12.1.1",
-                          style: TextThemeHelper.synergy_14_400,
+                          style: TextThemeHelper.synergy_14_400_underlined,
                         ),
                       ),
                     ],
