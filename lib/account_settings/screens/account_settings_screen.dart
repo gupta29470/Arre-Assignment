@@ -143,14 +143,12 @@ class AccountSettingsScreen extends StatelessWidget {
                         children: [
                           Row(
                             children: [
-                              Padding(
-                                padding: const EdgeInsets.only(right: 12),
-                                child: Container(
-                                  height: 20,
-                                  width: 20,
-                                  padding: const EdgeInsets.all(5),
-                                  decoration:
-                                      DecorationHelper.logoutButtonDecor,
+                              Container(
+                                height: 20,
+                                width: 20,
+                                margin: const EdgeInsets.only(right: 12),
+                                decoration: DecorationHelper.logoutButtonDecor,
+                                child: Center(
                                   child: Image.asset(
                                     Images.logout,
                                     height: 11,

@@ -42,12 +42,13 @@ class HighlightActionWidget extends StatelessWidget {
                   child: Container(
                     height: 20,
                     width: 20,
-                    padding: const EdgeInsets.all(5),
                     decoration: DecorationHelper.highlightActionLeadingDecor,
-                    child: Image.asset(
-                      image,
-                      height: 11,
-                      width: 11,
+                    child: Center(
+                      child: Image.asset(
+                        image,
+                        height: 11,
+                        width: 11,
+                      ),
                     ),
                   ),
                 ),
