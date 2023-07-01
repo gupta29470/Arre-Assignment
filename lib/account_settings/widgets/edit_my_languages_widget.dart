@@ -26,7 +26,7 @@ class EditMyLanguagesWidget extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(bottom: 20),
             child: SizedBox(
-              height: 9,
+              height: 6,
               width: 30,
               child: DecoratedBox(
                 decoration: DecorationHelper.editLanguagesBottomSheetDropDecor,
@@ -36,8 +36,8 @@ class EditMyLanguagesWidget extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(bottom: 10),
             child: Text(
-              "Edit My Languages",
-              style: TextThemeHelper.aquaTint_20_700,
+              "Edit Language",
+              style: TextThemeHelper.editLanguageTextStyle,
             ),
           ),
           Padding(
@@ -74,11 +74,11 @@ class EditMyLanguagesWidget extends StatelessWidget {
                     );
                   },
                 ),
-                const SizedBox(width: 50),
+                const SizedBox(width: 54),
                 TextButton(
                   child: Text(
                     "Cancel",
-                    style: TextThemeHelper.white_14_700,
+                    style: TextThemeHelper.languageCancelTextStyle,
                   ),
                   onPressed: () {
                     Navigator.pop(context);

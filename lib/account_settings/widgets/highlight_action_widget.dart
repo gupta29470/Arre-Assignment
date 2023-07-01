@@ -21,7 +21,12 @@ class HighlightActionWidget extends StatelessWidget {
       splashColor: AppColorsHelper.coarseWool,
       onTap: onTap,
       child: Container(
-        padding: const EdgeInsets.all(12),
+        padding: const EdgeInsets.fromLTRB(
+          13,
+          12,
+          13,
+          13,
+        ),
         margin: const EdgeInsets.only(
           bottom: 16,
         ),
@@ -34,26 +39,28 @@ class HighlightActionWidget extends StatelessWidget {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(right: 12),
-                  child: CircleAvatar(
-                    backgroundColor: AppColorsHelper.synergy,
-                    radius: 10,
+                  child: Container(
+                    height: 20,
+                    width: 20,
+                    padding: const EdgeInsets.all(5),
+                    decoration: DecorationHelper.highlightActionLeadingDecor,
                     child: Image.asset(
                       image,
-                      height: 12,
-                      fit: BoxFit.cover,
+                      height: 11,
+                      width: 11,
                     ),
                   ),
                 ),
                 Text(
                   title,
-                  style: TextThemeHelper.aquaTint_14_700,
+                  style: TextThemeHelper.highlightActionTextStyle,
                 ),
               ],
             ),
-            const Icon(
+            Icon(
               Icons.arrow_forward_ios,
               size: 12,
-              color: AppColorsHelper.aquaTint,
+              color: AppColorsHelper.aquaTint_80,
             )
           ],
         ),
