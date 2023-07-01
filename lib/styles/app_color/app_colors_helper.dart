@@ -9,4 +9,5 @@ class AppColorsHelper {
   static const Color white = Color(0XFFFFFFFF);
   static const Color dimGrey = Color(0xFF696969);
   static const Color creoleSauce = Color(0XFFEE8C34);
+  static Color aquaTint_80 = aquaTint.withOpacity(0.8);
 }

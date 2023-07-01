@@ -8,8 +8,8 @@ class ButtonThemeHelper {
         ),
         padding: MaterialStateProperty.all(
           const EdgeInsets.symmetric(
-            horizontal: 32,
-            vertical: 16,
+            horizontal: 40,
+            vertical: 14,
           ),
         ),
         shape: MaterialStateProperty.all(

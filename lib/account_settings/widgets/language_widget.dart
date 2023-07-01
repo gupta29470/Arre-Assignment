@@ -26,29 +26,28 @@ class LanguageWidget extends ConsumerWidget {
         clipBehavior: Clip.none,
         children: [
           Container(
-            padding: isEnglishLanguage
-                ? const EdgeInsets.symmetric(
-                    vertical: 16,
-                    horizontal: 24,
-                  )
-                : const EdgeInsets.symmetric(
-                    vertical: 8,
-                    horizontal: 24,
-                  ),
+            height: 49,
+            width: 92,
             decoration: isLanguageSelected
                 ? DecorationHelper.editLanguageDecorSelected
                 : DecorationHelper.editLanguageDecor,
-            child: isEnglishLanguage
-                ? Text(
-                    LanguageConstants.languagesList[index][0],
-                    style: TextThemeHelper.synergy_12_400,
-                    textAlign: TextAlign.center,
-                  )
-                : Text(
-                    "${LanguageConstants.languagesList[index][0]}\n${LanguageConstants.languagesList[index][1]}",
-                    style: TextThemeHelper.synergy_12_400,
-                    textAlign: TextAlign.center,
-                  ),
+            child: Center(
+              child: isEnglishLanguage
+                  ? Text(
+                      LanguageConstants.languagesList[index][0],
+                      style: isLanguageSelected
+                          ? TextThemeHelper.englishSelectedLanguageTextStyle
+                          : TextThemeHelper.englishLanguageTextStyle,
+                      textAlign: TextAlign.center,
+                    )
+                  : Text(
+                      "${LanguageConstants.languagesList[index][0]}\n${LanguageConstants.languagesList[index][1]}",
+                      style: isLanguageSelected
+                          ? TextThemeHelper.languageSelectedTextStyle
+                          : TextThemeHelper.languageTextStyle,
+                      textAlign: TextAlign.center,
+                    ),
+            ),
           ),
           if (isLanguageSelected) ...[
             Positioned(
@@ -58,14 +57,7 @@ class LanguageWidget extends ConsumerWidget {
                 height: 16,
                 width: 16,
                 child: DecoratedBox(
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: AppColorsHelper.coarseWool,
-                    border: Border.all(
-                      color: AppColorsHelper.creoleSauce,
-                      width: 2,
-                    ),
-                  ),
+                  decoration: DecorationHelper.languageSelectedCheckDecor,
                   child: const Icon(
                     Icons.check,
                     color: AppColorsHelper.creoleSauce,

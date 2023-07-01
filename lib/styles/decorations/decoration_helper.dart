@@ -3,8 +3,13 @@ import 'package:arre_assignment/styles/app_color/app_colors_helper.dart';
 import 'package:flutter/material.dart';
 
 class DecorationHelper {
-  static BoxDecoration get appBarDividerDecor => BoxDecoration(
-        color: AppColorsHelper.spinnaker.withOpacity(0.7),
+  static BoxDecoration get accountSettingsAppBarDecor => BoxDecoration(
+        border: Border(
+          bottom: BorderSide(
+            color: AppColorsHelper.spinnaker.withOpacity(0.3),
+          ),
+        ),
+        color: AppColorsHelper.freinachtBlack,
       );
 
   static BoxDecoration get customizeInterfaceDecor => BoxDecoration(
@@ -52,7 +57,7 @@ class DecorationHelper {
         ),
         color: AppColorsHelper.freinachtBlack,
         border: Border.all(
-          color: AppColorsHelper.spinnaker.withOpacity(0.7),
+          color: AppColorsHelper.spinnaker.withOpacity(0.3),
         ),
       );
 
@@ -64,5 +69,24 @@ class DecorationHelper {
           color: AppColorsHelper.creoleSauce,
         ),
         color: AppColorsHelper.freinachtBlack,
+      );
+
+  static BoxDecoration get logoutButtonDecor => const BoxDecoration(
+        shape: BoxShape.circle,
+        color: AppColorsHelper.synergy,
+      );
+
+  static BoxDecoration get highlightActionLeadingDecor => const BoxDecoration(
+        shape: BoxShape.circle,
+        color: AppColorsHelper.synergy,
+      );
+
+  static BoxDecoration get languageSelectedCheckDecor => BoxDecoration(
+        shape: BoxShape.circle,
+        color: AppColorsHelper.coarseWool,
+        border: Border.all(
+          color: AppColorsHelper.creoleSauce,
+          width: 2,
+        ),
       );
 }

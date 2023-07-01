@@ -19,12 +19,12 @@ class ActionWidget extends StatelessWidget {
         children: [
           Text(
             title,
-            style: TextThemeHelper.aquaTint_14_400,
+            style: TextThemeHelper.aquaTint80_14_400,
           ),
-          const Icon(
+          Icon(
             Icons.arrow_forward_ios,
             size: 10,
-            color: AppColorsHelper.aquaTint,
+            color: AppColorsHelper.aquaTint_80,
           ),
         ],
       ),
